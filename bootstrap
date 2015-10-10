@@ -1298,7 +1298,7 @@ export CXX
 export MAKE
 
 # Run bootstrap CMake to configure real CMake
-"${cmake_bootstrap_dir}/cmake" "${cmake_source_dir}" "-C${cmake_bootstrap_dir}/InitialCacheFlags.cmake" "-G${cmake_bootstrap_generator}" ${cmake_bootstrap_system_libs}
+"${cmake_bootstrap_dir}/cmake" "${cmake_source_dir}" "-C${cmake_bootstrap_dir}/InitialCacheFlags.cmake" "-G${cmake_bootstrap_generator}" ${cmake_bootstrap_system_libs} ${CMAKE_BOOTSTRAP_CMAKE_OPTIONS}
 RES=$?
 if [ "${RES}" -ne "0" ]; then
   cmake_error 11 "Problem while running initial CMake"
